@@ -31,7 +31,7 @@ However, the Model class initializer of the previous demo expects the vertices o
                                         bufferAllocator:nil];
 
 
-The Model class initializer, initWithURL: scans the array of vertex attributes (**MDLVertexAttribute**) using **MDLMesh**'s vertexDescriptor (**MDLVertexDescriptor**) property to determine if the mesh does have normal and texture coordinate attributes.
+The Model class initializer, *initWithURL:* scans the array of vertex attributes (**MDLVertexAttribute**) using **MDLMesh**'s vertexDescriptor (**MDLVertexDescriptor**) property to determine if the mesh does have normal and texture coordinate attributes.
 
 Then the initializer method prepares a custom vertex descriptor (**MDLVertexDescriptor**) with a single attribute layout (**MDLVertexBufferLayout**). For the initializer to work properly with the *prepareForOpenGL* method, it calls the 2 methods, **setPackedOffsets** and **setPackedStrides** (see Apple's API docs for detailed information) and then re-loads the **MDLAsset**.
  
@@ -50,12 +50,15 @@ It is obvious, by now, the following methods must always to call :
 
         meshWithSCNGeometry:bufferAllocator:
 
-initWithMesh:error:
+        initWithMesh:error:
 
 to create **GLKMesh** objects from an instance of **SCNGeometry**. 
 
-
 <br />
+<br />
+
+![](Documentation/Output.png)
+
 <br />
 <br />
 
